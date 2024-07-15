@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = (currentIndex + 1) % contentItems.length;
   }
 
-  // Automatically show the next image every 5 seconds (adjust as needed)
-  setInterval(showNextImage, 3000); // 5 seconds
+  // Automatically show the next image every 4 seconds
+  setInterval(showNextImage, 4000);
 
   // Initial setup
   showNextImage();
@@ -84,12 +84,12 @@ function updateDots() {
 function autoScroll() {
   currentGroup++; // Move to the next group
   const targetSlide = currentGroup * slidesPerDot;
-  const slideWidth = slider.clientWidth; // Adjust if needed
+  const slideWidth = slider.clientWidth;
 
   // Scroll to the target slide
   slider.scrollTo({
     left: targetSlide * slideWidth,
-    behavior: "smooth", // Add smooth scrolling effect
+    behavior: "smooth",
   });
 
   // Update dot images
